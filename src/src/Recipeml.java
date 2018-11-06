@@ -6,7 +6,7 @@
 //
 
 
-package generated;
+package src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,15 +130,29 @@ import javax.xml.bind.annotation.XmlType;
     "recipe"
 })
 @XmlRootElement(name = "recipeml")
-public class Recipeml {
+public class Recipeml implements Identifiable{
 
     @XmlElement(required = true)
     protected Recipeml.Recipe recipe;
     @XmlAttribute(name = "version")
     protected Float version;
     
+    @Override
+    public String getId() {
+    	return this.getRecipeName();
+    }
+    
+    @Override 
+    public void setId(String id) {
+    	this.setRecipeName(id);
+    }
+    
     public String getRecipeName() {
     	return this.getRecipe().getHead().getTitle();
+    }
+    
+    public void setRecipeName(String name) {
+    	this.getRecipe().getHead().setTitle(name);    	
     }
     
     public List<String> getCategories() {
