@@ -11,7 +11,9 @@ public class RecipemlResourceAssembler extends ResourceAssembler<Recipeml, Recip
 	protected EntityLinks entityLinks;
 	
 	private static final String UPDATE_REL = "update";
+	
     private static final String DELETE_REL = "delete";
+    
     @Override
     public RecipemlResource toResource(Recipeml recipe) {
         RecipemlResource resource = new RecipemlResource(recipe);
@@ -21,5 +23,4 @@ public class RecipemlResourceAssembler extends ResourceAssembler<Recipeml, Recip
         resource.add(selfLink.withRel(DELETE_REL));
         return resource;
     }
-
 }

@@ -1,6 +1,7 @@
 package src;
 import org.springframework.hateoas.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;

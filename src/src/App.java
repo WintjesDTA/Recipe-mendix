@@ -1,23 +1,15 @@
 package src;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.hateoas.config.*;
 
-import java.io.File;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;;
 
+@EnableEntityLinks
+@EnableHypermediaSupport(type = org.springframework.hateoas.config.EnableHypermediaSupport.HypermediaType.HAL)
+@SpringBootApplication
 public class App {
 	public static void main( String[] args )
     {
-        System.out.println( "Hello World!" ); 
-        try {
-    		File file = new File("src/Amaretto_Cake.xml");
-    		JAXBContext jaxbContext = JAXBContext.newInstance(Recipeml.class);
-    		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-    		// output pretty printet    		
-    		Recipeml recipe = (Recipeml) jaxbUnmarshaller.unmarshal(file);
-    		System.out.println(recipe.getRecipeName());
-    	      } catch (JAXBException e) {
-    		e.printStackTrace();
-    	      }
+		SpringApplication.run(App.class, args);
     }
 }
