@@ -3,7 +3,7 @@ package src;
 import java.util.*;
 
 
-public class RecipeRepository extends InMemoryRepository<Recipeml> {
+public class RecipemlRepository extends InMemoryRepository<Recipeml> {
 	
 	protected void updateIfExists(Recipeml original, Recipeml updated) {
         original.setId(updated.getId());

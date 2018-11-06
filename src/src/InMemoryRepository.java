@@ -8,7 +8,7 @@ public abstract class InMemoryRepository<T extends Identifiable> {
         elements.add(element);
         return element;
     }
-    public boolean delete(Long id) {
+    public boolean delete(String id) {
         return elements.removeIf(element -> element.getId().equals(id));
     }
     public List<T> findAll() {
