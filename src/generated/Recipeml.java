@@ -136,6 +136,16 @@ public class Recipeml {
     protected Recipeml.Recipe recipe;
     @XmlAttribute(name = "version")
     protected Float version;
+    
+    public String getRecipeName() {
+    	return this.getRecipe().getHead().getTitle();
+    }
+    
+    public List<String> getCategories() {
+    	return this.getRecipe().getHead().getCategories().getCat();
+    }
+    
+    
 
     /**
      * Gets the value of the recipe property.

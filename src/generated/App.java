@@ -15,7 +15,7 @@ public class App {
     		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
     		// output pretty printet    		
     		Recipeml recipe = (Recipeml) jaxbUnmarshaller.unmarshal(file);
-    		System.out.println(recipe.getRecipe().ingredients.ingDiv.get(0).title);
+    		System.out.println(recipe.getRecipeName());
     	      } catch (JAXBException e) {
     		e.printStackTrace();
     	      }
