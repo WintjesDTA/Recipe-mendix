@@ -30,7 +30,7 @@ I decided to decouple the recipeml domain class and its RecipemlResource which c
 the spring controller with the right data, without having to deal with the auto-generated Recipeml class.
 
 I feel confident that I could have fully implemented the requirements if I had spent more time on the assignement.
-It however was a while ago that I worked with java so it took me a while to get started.
+It however was a while ago that I worked with java.
 
 Looking forward to your feedback!
 
